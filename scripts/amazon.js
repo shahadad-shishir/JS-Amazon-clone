@@ -1,3 +1,7 @@
+//loading variables from other files
+import {cart} from '../data/cart.js';
+
+
 //data structure for products
 //Loaded in products.js file
 
