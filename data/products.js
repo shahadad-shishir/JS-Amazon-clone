@@ -656,5 +656,25 @@ const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: 'id1',
+    image: 'images/products/backpack.jpg',
+    name: 'Good Backpack for Journey',
+    rating: {
+      stars: 4.5,
+      count: 125
+    },
+    priceCents: 1285
+  },
+  {
+    id: 'id2',
+    image: 'images/products/umbrella.jpg',
+    name: 'Wether friendly Umbrella',
+    rating: {
+      stars: 5,
+      count: 50
+    },
+    priceCents: 670
   }
 ];
