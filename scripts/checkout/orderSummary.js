@@ -5,6 +5,8 @@ import {formatCurrency} from '../utils/money.js';
 //Default Export
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'; 
 import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js';
+import {randerPaymentSummery} from './paymentSummary.js';
+
 
 export function randerOrderSummary() {
   updateCartQuantity();
@@ -119,6 +121,8 @@ export function randerOrderSummary() {
 
         const container = document.querySelector(`.js-cart-item-container-${productId}`);
         container.remove();
+
+        randerPaymentSummery();
         updateCartQuantity();
       });
     });
@@ -170,6 +174,7 @@ export function randerOrderSummary() {
 
         updateDeliveryOption(productId, deliveryOptionId);
         randerOrderSummary();
+        randerPaymentSummery();
       });
     });
 }
