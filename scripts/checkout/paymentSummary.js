@@ -1,9 +1,9 @@
-import {cart} from '../../data/cart.js';
+import {cart, calculateCartQuantity} from '../../data/cart.js';
 import {getProduct} from '../../data/products.js';
 import {getDeliveryOption} from '../../data/deliveryOptions.js';
 import formatCurrency from '../utils/money.js';
 
-export function randerPaymentSummery() {
+export function renderPaymentSummery() {
   let productPriceCents = 0;
   let shippingPriceCents = 0;
 
@@ -27,7 +27,7 @@ export function randerPaymentSummery() {
     </div>
 
     <div class="payment-summary-row">
-      <div>Items (3):</div>
+      <div>Items (${calculateCartQuantity()}):</div>
       <div class="payment-summary-money">
       $${formatCurrency(productPriceCents)}
       </div>

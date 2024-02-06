@@ -1,5 +1,7 @@
-import {randerOrderSummary} from "./checkout/orderSummary.js";
-import {randerPaymentSummery} from './checkout/paymentSummary.js';
+import {renderOrderSummary} from "./checkout/orderSummary.js";
+import {renderPaymentSummery} from './checkout/paymentSummary.js';
+import {renderCheckoutHeader} from "./checkout/checkoutHeader.js";
 
-randerOrderSummary();
-randerPaymentSummery();
+renderCheckoutHeader();
+renderOrderSummary();
+renderPaymentSummery();
